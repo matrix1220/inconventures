@@ -9,18 +9,21 @@ class="portfolio-body"
 <section class="portfolio-sec">
   <div class="container">
     <div class="portfolio-types">
-      <a href="#" class="h-default active">All</a>
-      <a href="#" class="h-default">Website</a>
-      <a href="#" class="h-default">Mobile app</a>
-      <a href="#" class="h-default">Branding</a>
-      <a href="#" class="h-default">Logo</a>
-      <a href="#" class="h-default">SMM</a>
-      <a href="#" class="h-default">Graphic design</a>
+      <a href="{{ route('portfolio') }}" class="h-default {{ $subservice_id==0 ? 'active':''}}">
+        {{ __('portfolio.all') }}
+      </a>
+      @foreach(App\PortfolioItem::distinct()->get(['item_id']) as $portfolio_item)
+        <a
+          href="{{ route('portfolio', $portfolio_item->item_id) }}"
+          class="h-default {{ $subservice_id==$portfolio_item->item_id ? 'active':''}}">
+          {{ $portfolio_item->item->title() }}
+        </a>
+      @endforeach
     </div>
   </div>
   <div class="portfolios-wrapper">
 
-  @foreach(App\Portfolio::all() as $portfolio)
+  @foreach($portfolios as $portfolio)
   <div class="portfolio__item">
     <div class="portfolio-inner__item">
 
@@ -29,12 +32,12 @@ class="portfolio-body"
   <h4>{{ $portfolio->name }}</h4>
   <p>{{ $portfolio->description() }}</p>
   <div class="services-link-wrapper">
-    @foreach ($portfolio->service_types as $service_type)
-      <a href="{{ route('services',$service_type->id) }}">{{ $service_type->name() }}</a>
+    @foreach ($portfolio->items as $item)
+      <a href="{{ route('services',$item->id) }}">{{ $item->title() }}</a>
     @endforeach
   </div>
   @if($portfolio->link)
-    <a href="{{ $portfolio->link }}" class="more-info-link">More information</a>
+    <a href="{{ $portfolio->link }}" class="more-info-link" target="_blank">{!! __("parts.portfolio.more_info") !!}</a>
   @endif
     <ul class="social-links">
       @if($portfolio->link_telegram)

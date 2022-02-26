@@ -1,7 +1,6 @@
 <?php
 
 return [
-    'title' => 'About',
     'header_title' => "ABOUT US",
     'header_text' => "We possess a winning combination of creative, technical and people skills that make us really fun to work with. We build dreams.",
     'header_buttons' => "<a href=\"#\" class=\"h-normal js-down\">Who we are</a>",
@@ -9,8 +8,8 @@ return [
     'service_title' => "We are a full service agency with offerings in web development, marketing and user experience.",
     'service_description' => "We at Incon Ventures plays a major role in connecting global business with innovation in business strategy & corporate trends. Our enthusiastic and dedicated teamwork coupled with commitment towards our valued customer-satisfaction approach would help us to full-in our clients list",
 
-    'body_1' => "Incon Ventures can also provide a fully-integrated service as an agent, local sponsor also as a joint venture to International Manufacturers, Suppliers and Contractors seeking to supply their products and services in Uzbekistan for any industry by offering the necessary assistance business/procurement support",
-    'body_2' => "Incon Ventures the beacon you have as a partner who offers comprehensive business solutions for all your project requirements. We would very much be pleased to enter in to your vender/- suppliers list and to support for your enquiries/tenders.",
+    'body_1' => "The emergence of our company, namely INCON VENTURES, especially in a highly challenging market environment in Uzbekistan, is a long awaited dream and we are sure that its majestic and well-carved presence would draw a serious of admiration from our customers in all around the world.",
+    'body_2' => "We at INCON VENTURES plays a major role in connecting global business with innovation in business strategy & corporate trends. Our enthusiastic and dedicated teamwork coupled with commitment towards our valued customer-satisfaction-approach would help us to full-in our clientele list",
 
     
     'team_title' => "We are combination of great culture, values and strong beliefs",

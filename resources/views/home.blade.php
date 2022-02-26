@@ -30,23 +30,20 @@
 
   @include('html.clients')
 
-  @include('html.services-block', [
+  @include('html.services', [
     "hasArrow" => false,
-    "title" => "We help your business thrive",
-    "description" => "Transforming business challenges into impactful web and mobile solutions that people love to use every day"
+    "title" => __("home.service_title"),
+    "description" => __("home.service_description")
   ])
 
 
 
 <section class="portfolio">
   <div class="container">
-    <h2 class="section-title">We form long-term partnerships to create topclass digital products</h2>
-    <p class="section-description">Incon Ventures is a large and experienced team working with many companies
-      at the same time. We look forward to seeing you as one of our clients.</p>
+    <h2 class="section-title">{!! __("home.portfolio_title") !!}</h2>
+    <p class="section-description">{!! __("home.portfolio_description") !!}</p>
     <h5 class="fancy-title">
-      <span>
-        our portfolio
-      </span>
+      <span>{!! __("parts.portfolio.our") !!}</span>
     </h5>
     <div class="portfolio-wrapper">
       @php($right = true)
@@ -61,11 +58,11 @@
     <h4>{{ $portfolio->name }}</h4>
     <p>{{ $portfolio->description() }}</p>
     <div class="services-link-wrapper">
-      @foreach ($portfolio->service_types as $service_type)
-        <a href="{{ route('services',$service_type->id) }}">{{ $service_type->name() }}</a>
+      @foreach ($portfolio->items as $item)
+      <a href="{{ route('services',$item->id) }}">{{ $item->title() }}</a>
       @endforeach
     </div>
-    <a href="{{ $portfolio->link }}" class="more-info-link">More information</a>
+    <a href="{{ $portfolio->link }}" class="more-info-link" target="_blank">{!! __("parts.portfolio.more_info") !!}</a>
   </div>
 </div>
 
@@ -74,9 +71,7 @@
     </div>
 
     <div class="link-wrapper">
-      <a href="{{ route('portfolio') }}" class="more-info-link">
-        See all works
-      </a>
+      <a href="{{ route('portfolio') }}" class="more-info-link">{!! __("parts.portfolio.see_all") !!}</a>
     </div>
   </div>
   
@@ -85,14 +80,10 @@
 
 <section class="team">
   <div class="container">
-    <h2 class="section-title">This is our team, achieving goals</h2>
-    <p class="section-description">Our team is keen to try out the newest tools & techniques. We’re always in
-      for experimenting with innovative solutions. Quality is valuable to us 
-      and not incidentally, we’re most self-critical. </p>
+    <h2 class="section-title">{!! __("home.team_title") !!}</h2>
+    <p class="section-description">{!! __("home.team_description") !!}</p>
     <h5 class="fancy-title">
-      <span>
-        our team
-      </span>
+      <span>{!! __("parts.team.our") !!}</span>
     </h5>
     <div class="team-members-wrapper">
       @foreach(App\TeamMember::take(6)->get() as $team_member)
@@ -100,9 +91,7 @@
       @endforeach
     </div>
     <div class="link-wrapper">
-      <a href="{{ route('about') }}" class="more-info-link">
-        See full list
-      </a>
+      <a href="{{ route('about') }}" class="more-info-link">{!! __("parts.team.see_all") !!}</a>
     </div>
   </div>
 </section>

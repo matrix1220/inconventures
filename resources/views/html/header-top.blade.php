@@ -1,28 +1,38 @@
 <div class="header-top__right basic-flex">
   <div class="mob-header-top">
     <a href="/" class="img-wrapper logo">
-      <img src="img/logo-w.svg" alt="logo" />
+      <img src="/img/logo-w.svg" alt="logo" />
     </a>
     <button type="button" class="img-wrapper menu-btn js-menu-btn">
-      <img src="img/icons/close-i.svg" alt="close">
+      <img src="/img/icons/close-i.svg" alt="close">
     </button>
   </div>
   <nav class="main-nav">
     <ul class="main-menu">
       <li class="main-menu__item">
-        <a class="h-default {{ $section == 'home' ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
+        <a class="h-default {{ $section == 'home' ? 'active' : '' }}" href="{{ route('home') }}">
+          {{ __("home.title") }}
+        </a>
       </li>
       <li class="main-menu__item">
-        <a class="h-default {{ $section == 'services' ? 'active' : '' }}" href="{{ route('services') }}">Services</a>
+        <a class="h-default {{ $section == 'services' ? 'active' : '' }}" href="{{ route('services') }}">
+          {{ __("services.title") }}
+        </a>
       </li>
       <li class="main-menu__item">
-        <a class="h-default {{ $section == 'portfolio' ? 'active' : '' }}" href="{{ route('portfolio') }}">Portfolio</a>
+        <a class="h-default {{ $section == 'portfolio' ? 'active' : '' }}" href="{{ route('portfolio') }}">
+          {{ __("portfolio.title") }}
+        </a>
       </li>
       <li class="main-menu__item">
-        <a class="h-default {{ $section == 'about' ? 'active' : '' }}" href="{{ route('about') }}">About</a>
+        <a class="h-default {{ $section == 'about' ? 'active' : '' }}" href="{{ route('about') }}">
+          {{ __("about.title") }}
+        </a>
       </li>
       <li class="main-menu__item">
-        <a class="h-default {{ $section == 'contact' ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>
+        <a class="h-default {{ $section == 'contact' ? 'active' : '' }}" href="{{ route('contact') }}">
+          {{ __("contact.title") }}
+        </a>
       </li>
     </ul>
   </nav>

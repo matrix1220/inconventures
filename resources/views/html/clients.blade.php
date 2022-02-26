@@ -1,11 +1,9 @@
 <section class="clients-block">
   <div class="container">
 
-<div class="clients-block">
+<!-- <div class="clients-block">
   <h5 class="fancy-title">
-    <span>
-      clients
-    </span>
+    <span>{!! __("parts.clients") !!}</span>
   </h5>
 
   <div class="clients-wrapper js-partners-slider">
@@ -15,7 +13,7 @@
     </div>
     @endforeach
   </div>
-</div>
+</div> -->
 
   </div>
 </section>

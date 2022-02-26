@@ -1,7 +1,6 @@
 <?php
 
 return [
-    'title' => 'Home',
     'header_title' => "We <span class=\"color2\">Consult</span>, <span class=\"color1\">Design</span> , <span class=\"color2\">Develop</span> & <span class=\"color1\">Manage</span> your Business globally",
     'header_text' => "We're a digital agency from Uzbekistan helping users and businesses to reach their goals by designing & building meaningful digital products and interactive experiences.",
     'header_buttons' => "<a href=\"services\" class=\"h-big\">View our services</a><a href=\"portfolio\" class=\"h-normal\">Discover our work</a>",

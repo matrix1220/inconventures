@@ -1,12 +1,10 @@
-<div class="partners" id="partners">
+<!-- <div class="partners" id="partners">
   <div class="container">
-    <h2 class="section-title">We like to call these companies our partners</h2>
+    <h2 class="section-title">{!! __("parts.partners.description") !!}</h2>
 
 <div class="clients-block">
   <h5 class="fancy-title">
-    <span>
-      our partners
-    </span>
+    <span>{!! __("parts.partners.our") !!}</span>
   </h5>
 
   @php($partners = App\Partner::all()->toArray())
@@ -31,4 +29,4 @@
 
 
   </div>
-</div>
+</div> -->

@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Portfolio extends Model
 {
-    public function service_types()
+    public function items()
     {
-        return $this->belongsToMany('App\ServiceType', 'portfolio_service_types');
+        return $this->belongsToMany('App\Subservice', 'portfolio_items', 'portfolio_id', 'item_id');
     }
     public function description()
     {
